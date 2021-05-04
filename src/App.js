@@ -72,6 +72,7 @@ function App() {
   const linkName = readMore ? <b>&#45;</b> : <b>&#43;</b>;
 
   return (
+    <div className="web">
     <div className="App">
       {isFetching ? (
         <>
@@ -112,9 +113,9 @@ function App() {
                   </div>
                   <div className="column right">
                     <p className="names">
-                      <b>
+                      <b><h1>
                         {student.firstName} {student.lastName}
-                      </b>
+                        </h1></b>
                     </p>
                     <p>Email : {student.email}</p>
                     <p>Company : {student.company}</p>
@@ -156,6 +157,7 @@ function App() {
       ) : (
         <div>Loading.....</div>
       )}
+    </div>
     </div>
   );
 }
